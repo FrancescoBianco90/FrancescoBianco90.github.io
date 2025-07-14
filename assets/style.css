@@ -1,7 +1,8 @@
+/* IMPORT FONT */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  background-image: url('assets/sfondovideogames.jpg');
+  background-image: url('sfondovideogames.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -9,184 +10,127 @@ body {
   margin: 0;
 }
 
-.hero {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background: rgba(0, 0, 0, 0.7);
-  color: rgb(229, 235, 236);
-  text-shadow: 1px 1px 2px #000;
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  z-index: 1000;
 }
 
-section, .hero, footer {
-  background-color: rgba(0, 0, 0, 0.6);
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: #0ff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Hamburger */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  font-size: 2rem;
+  color: #0ff;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-ciano {
+  text-decoration: underline solid #0ff 2px;
+  text-underline-offset: 0.15em;
+}
+
+.menu a:hover {
+  color: #0ff;
+}
+
+/* Social icons vertical under 768px */
+.menu .social {
+  display: flex;
+  gap: 10px;
+}
+
+.menu .social a i {
+  font-size: 1.2rem;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu .social {
+    flex-direction: column;
+  }
+}
+
+/* HERO + SECTION */
+.hero {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+section, footer {
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
 }
 
 h1, h2, h3, p, a {
-  color: rgb(229, 235, 236);
-  text-shadow: 1px 1px 2px #000;
-  text-decoration: none;
-}
-
-/* Link sottolineati ciano */
-.menu-link,
-.link-ciano {
-  color: inherit;
-  text-decoration: underline solid #0ff 2px;
-  text-underline-offset: 0.3em;
-  transition: color 0.3s ease;
-}
-
-.menu-link:hover,
-.link-ciano:hover {
-  color: #0ff;
-}
-
-/* Navbar base */
-.navbar {
-  background-color: #222;
-  padding: 10px 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1050;
-  user-select: none;
-}
-
-/* Navbar brand */
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.4rem;
-  color: white;
-  text-decoration: none;
-}
-
-/* Nascondiamo input checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Hamburger stile */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-  width: 25px;
-  height: 22px;
-  justify-content: center;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-}
-
-/* Menu desktop */
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Link menu */
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.menu a:hover {
-  color: #0ff;
-  text-decoration: underline;
-}
-
-/* Social links come icone inline */
-.social-links a {
-  color: white;
-  font-size: 1.3rem;
-  margin-left: 10px;
-  transition: color 0.3s;
-}
-
-.social-links a:hover {
-  color: #0ff;
-}
-
-/* MOBILE - menu hamburger */
-@media (max-width: 767px) {
-  /* Hamburger visibile */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Nascondiamo menu */
-  .menu {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    background-color: #222;
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    gap: 15px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    border-radius: 0 0 0 12px;
-    box-shadow: -4px 0 12px rgba(0,255,255,0.3);
-  }
-
-  /* Mostra menu se checkbox selezionata */
-  .menu-toggle:checked + .hamburger + .menu {
-    transform: translateX(0);
-  }
-
-  /* Link verticali */
-  .menu li {
-    margin: 0;
-  }
-  .menu a {
-    font-size: 1.1rem;
-    display: block;
-  }
-
-  /* Social links verticali */
-  .social-links {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .social-links a {
-    margin: 0.3rem 0;
-    font-size: 1.5rem;
-    margin-left: 0;
-  }
-}
-
-/* Custom blocchi esperienze */
-.custom-block-bg {
-  background-color: rgba(0, 0, 0, 0.6);
   color: #e5ebec;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.custom-block-bg {
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   padding: 20px;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.custom-block-bg i {
-  display: block;
-  margin: 0 auto 1rem auto;
+  transition: 0.3s;
 }
 
 .custom-block-bg:hover {
@@ -194,36 +138,25 @@ h1, h2, h3, p, a {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Responsività blocchi e icone per evitare sovrapposizioni */
-@media (max-width: 767px) {
-  .custom-block-bg i {
-    margin-bottom: 10px;
-  }
-  .custom-block-bg p {
-    font-size: 0.9rem;
-  }
-}
-
 .titolo-contattami {
-  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   border-radius: 12px;
-  display: inline-block;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
   margin-bottom: 20px;
 }
 
 .form-container {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 12px;
-  width: 100%;
   max-width: 600px;
-  margin-bottom: 20px;
+  margin: auto;
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   border: 1px solid #0ff;
 }
@@ -232,19 +165,12 @@ h1, h2, h3, p, a {
   color: #ccc;
 }
 
-.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: #0ff;
-  box-shadow: none;
-}
-
 .btn-primary {
-  background-color: #007bff;
+  background: #0ff;
   border: none;
+  color: #000;
 }
 
 .btn-primary:hover {
-  background-color: #0ff;
-  color: #000;
-  border: none;
+  background: #00e6e6;
 }
