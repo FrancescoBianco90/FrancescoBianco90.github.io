@@ -1,176 +1,144 @@
-/* IMPORT FONT */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  background-image: url('sfondovideogames.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Press Start 2P', monospace;
-  margin: 0;
+    background-image: url(sfondovideogames.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Press Start 2P', monospace;
+    margin: 0;
 }
 
-/* NAVBAR */
-.navbar {
-  position: sticky;
-  top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 1rem;
-  z-index: 1000;
+.hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+section, .hero, footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.brand {
-  color: #0ff;
-  font-size: 1.2rem;
-  text-decoration: none;
+h1, h2, h4, p, a {
+    color: rgb(229, 235, 236) !important;
+    text-shadow: #000000;
 }
 
-/* Hamburger */
-#menu-toggle {
-  display: none;
+.navbar-nav .nav-link:hover {
+    color: #0ff !important;
+    text-decoration: underline;
 }
 
-.hamburger {
-  font-size: 2rem;
-  color: #0ff;
-  cursor: pointer;
-  display: none;
+.navbar a i {
+    font-size: 20px;
+    transition: color 0.3s;
 }
 
-/* Menu */
-.menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin-left: 20px;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
+.navbar a i:hover {
+    color: #0ff;
 }
 
 .link-ciano {
-  text-decoration: underline solid #0ff 2px;
-  text-underline-offset: 0.15em;
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
-  color: #0ff;
-}
-
-/* Social icons vertical under 768px */
-.menu .social {
-  display: flex;
-  gap: 10px;
-}
-
-.menu .social a i {
-  font-size: 1.2rem;
-}
-
-/* Responsive nav */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-  }
-
-  #menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
-
-  .menu li {
-    margin: 10px 0;
-  }
-
-  .menu .social {
-    flex-direction: column;
-  }
-}
-
-/* HERO + SECTION */
-.hero {
-  padding: 60px 20px;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-section, footer {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-h1, h2, h3, p, a {
-  color: #e5ebec;
+.link-ciano:hover {
+  color: #0ff !important;
 }
 
 .custom-block-bg {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 20px;
-  transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: #e5ebec;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .custom-block-bg:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.blocchi-sezioni .icona i {
+    text-shadow: 2px 2px 4px #000;
 }
 
 .titolo-contattami {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-  margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    margin-bottom: 20px;
 }
 
 .form-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+footer form .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid #0ff;
+}
+
+footer form .form-control::placeholder {
+    color: #ccc;
+}
+
+footer form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #0ff;
+    box-shadow: none;
+}
+
+footer a {
+    color: #0ff;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .titolo-contattami,
+    .form-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.cv-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
   border-radius: 12px;
-  max-width: 600px;
-  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
-.form-control {
-  background: rgba(255, 255, 255, 0.1);
+.cv-section h1, .cv-section h2, .cv-section p, .cv-section li {
   color: #fff;
-  border: 1px solid #0ff;
+  text-shadow: 1px 1px 2px #000;
+  margin-bottom: 10px;
 }
 
-.form-control::placeholder {
-  color: #ccc;
-}
-
-.btn-primary {
-  background: #0ff;
-  border: none;
-  color: #000;
-}
-
-.btn-primary:hover {
-  background: #00e6e6;
+.cv-section ul {
+  padding-left: 20px;
 }
