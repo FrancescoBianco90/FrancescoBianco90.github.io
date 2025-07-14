@@ -11,36 +11,40 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Francesco Bianco</a>
-      
-<!-- Bottone hamburger per mobile -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  
+🔽 Sostituisci solo questa parte:
 
-      <div class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
-          <li class="nav-item"><a class="nav-link" target="_blank">Contatti :</a></li>
-        </ul>
-        <!-- Icone social nella navbar -->
-        <div class="ms-3 d-flex align-items-center">
-          <a href="https://linkedin.com/in/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
-          <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-          <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
-          <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
-        </div>
+html
+Copia
+Modifica
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-mobile">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#">Francesco Bianco</a>
+
+    <!-- Nuovo hamburger solo CSS -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+      </ul>
+
+      <!-- Social -->
+      <div class="ms-3 d-flex align-items-center">
+        <a href="https://linkedin.com/in/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
+        <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Immagine personale -->
   <header class="hero text-center text-white">
