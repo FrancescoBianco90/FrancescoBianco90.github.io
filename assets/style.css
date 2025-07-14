@@ -163,8 +163,8 @@ footer {
     top: 0;
     z-index: 1020;
   }
-}
+
 .navbar .container {
     overflow: visible; /* Evita blocchi sticky */
   }
-
+}
