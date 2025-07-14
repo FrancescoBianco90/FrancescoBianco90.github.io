@@ -156,3 +156,11 @@ footer {
 .cv-section ul {
   padding-left: 20px;
 }
+/* Sticky navbar solo su mobile */
+@media (max-width: 767.98px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
