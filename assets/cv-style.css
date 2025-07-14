@@ -14,7 +14,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  
 }
 .hero {
   padding: 40px;
@@ -49,7 +48,6 @@
   box-shadow: 0 0 0 6px #000; /* cerchio nero dietro */
   border-radius: 50%; /* torna circolare */
 }
-
 
 /* BLOCCHI */
 .cv-grid {
@@ -133,10 +131,6 @@
   text-decoration: underline; /* sottolinea solo in hover */
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .header-content {
@@ -155,11 +149,19 @@
     border-left: none;
     border-top: 4px solid #0ff;
   }
+  /* Icona sopra il testo in mobile */
+  .cv-blocco h2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cv-blocco h2 i {
+    margin: 0 0 10px 0;
+  }
 }
 
- .cv-blocco h2 i {
-    margin: 0 0 10px 0;      /* margine sotto icona */
-  }
+* {
+  box-sizing: border-box;
+}
 
 .footer {
   text-align: center;
@@ -180,4 +182,3 @@
   background-color: #00FFFF; /* hover ciano */
   color: #111; /* contrasto testo */
 }
-
