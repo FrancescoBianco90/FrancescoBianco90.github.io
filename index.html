@@ -5,46 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Il mio Sito Personale</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="icon" type="img/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  
-🔽 Sostituisci solo questa parte:
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Francesco Bianco</a>
 
-html
-Copia
-Modifica
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-mobile">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="#">Francesco Bianco</a>
+      <!-- Bottone hamburger -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Nuovo hamburger solo CSS -->
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-    </label>
-
-    <!-- Menu -->
-    <div class="collapse navbar-collapse justify-content-end" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
-      </ul>
-
-      <!-- Social -->
-      <div class="ms-3 d-flex align-items-center">
-        <a href="https://linkedin.com/in/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
-        <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-        <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
-        <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+        </ul>
+        <!-- Icone social -->
+        <div class="ms-3 social-links">
+          <a href="https://linkedin.com/in/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+          <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
+          <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Immagine personale -->
   <header class="hero text-center text-white">
@@ -54,12 +50,13 @@ Modifica
 
   <!-- Descrizione -->
   <section class="container text-center my-5">
-    <p class="lead">Inizia il mio nuovo cammino da <strong>studente Full Stack Developer</strong> con <a href="https://www.start2impact.it/" target="_blank" class="link-ciano">Start2Impact</a>.</p>
+    <p class="lead">Inizia il mio nuovo cammino da <strong>studente Full Stack Developer</strong> con 
+      <a href="https://www.start2impact.it/" target="_blank" class="link-ciano">Start2Impact</a>.</p>
     <p>Visita il mio profilo GitHub:</p>
     <a href="https://github.com/FrancescoBianco90" class="btn btn-primary" target="_blank">Vai al Profilo</a>
   </section>
 
-  <!-- Sezioni in blocchi orizzontali -->
+  <!-- Sezioni blocchi -->
   <section class="container my-5">
     <div class="row text-center">
 
@@ -70,7 +67,7 @@ Modifica
             <i class="fa-solid fa-user fa-3x" style="color:blueviolet"></i>
           </div>
           <h3>About Me</h3>
-          <p>Mi chiamo Francesco Bianco, ho lavorato come tecnico giuntista specializzato in reti FTTH nel settore delle telecomunicazioni per diversi anni. Ho maturato esperienza sia come panettiere che come tecnico delivery di fibra ottica, imparando la precisione e l’affidabilità che metto oggi in ogni progetto. Mi piace affrontare nuove sfide e collaborare in squadra per portare a termine lavori complessi.</p>
+          <p>Mi chiamo Francesco Bianco, ho lavorato come tecnico giuntista specializzato in reti FTTH nel settore delle telecomunicazioni. Ho maturato esperienza come panettiere e tecnico delivery di fibra ottica, imparando la precisione e l’affidabilità che metto in ogni progetto.</p>
         </div>
       </div>
 
@@ -78,10 +75,10 @@ Modifica
       <div class="col-md-4 mb-4">
         <div class="p-4 shadow rounded h-100 custom-block-bg">
           <div class="mb-3">
-            <i class="fa-solid fa-music fa-3x text-center" style="color:gold"></i>    
+            <i class="fa-solid fa-music fa-3x" style="color:gold"></i>    
           </div>
           <h3>Hobby</h3>
-          <p>Amo la musica in tutte le sue sfumature e generi, con una particolare passione per la collezione di vinili, che custodisco con cura. Sono sempre alla ricerca di nuova musica da scoprire e ascoltare, un viaggio continuo tra suoni e atmosfere diverse. Inoltre, adoro i videogiochi specialmente quelli di ruolo competitivi che mi trasmettono adrenalina e pathos. Infine, sono un appassionato di calcio, uno sport che seguo con entusiasmo e passione.</p>
+          <p>Amo la musica, colleziono vinili e adoro i videogiochi di ruolo competitivi. Sono un appassionato di calcio che seguo con entusiasmo.</p>
         </div>
       </div>
 
@@ -92,28 +89,28 @@ Modifica
             <i class="fa-solid fa-arrow-pointer fa-3x" style="color:darkgreen"></i>
           </div>
           <h3>Obiettivi</h3>
-          <p>Mi sono approcciato a questo percorso di Full Stack Developer con tanta determinazione e voglia di imparare. Voglio acquisire maggiori competenze e mi piace mettermi alla prova per verificare le competenze acquisite. Voglio reinventarmi come Sviluppatore Web e, crescendo nel settore, ottenere un maggiore equilibrio vita-lavoro.</p>
+          <p>Sto seguendo il percorso Full Stack Developer per reinventarmi come Sviluppatore Web e ottenere maggiore equilibrio vita-lavoro.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Sezione Contattami centrata -->
-<section id="contatti" class="text-center mb-5">
-  <h2 class="titolo-contattami">Contattami</h2>
-  <div class="form-container mx-auto">
-    <form>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="La tua email" />
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" placeholder="Il tuo messaggio"></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit">Invia</button>
-    </form>
-  </div>
-</section>
+  <!-- Sezione Contattami -->
+  <section id="contatti" class="text-center mb-5">
+    <h2 class="titolo-contattami">Contattami</h2>
+    <div class="form-container mx-auto">
+      <form>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="La tua email" />
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" placeholder="Il tuo messaggio"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Invia</button>
+      </form>
+    </div>
+  </section>
 
 </body>
 </html>

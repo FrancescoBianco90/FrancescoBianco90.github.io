@@ -157,6 +157,10 @@
   }
 }
 
+ .cv-blocco h2 i {
+    margin: 0 0 10px 0;      /* margine sotto icona */
+  }
+
 .footer {
   text-align: center;
   padding: 40px 0;
