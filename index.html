@@ -11,24 +11,40 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Francesco Bianco</a>
-      <div class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
-          <li class="nav-item"><a class="nav-link" target="_blank">Contatti :</a></li>
-        </ul>
-        <div class="ms-3 d-flex align-items-center">
-          <a href="https://linkedin.com/in/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
-          <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-          <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
-          <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
-        </div>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Francesco Bianco</a>
+
+    <!-- Hamburger menu mobile -->
+    <div class="d-lg-none ms-auto">
+      <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+    </div>
+
+    <!-- Menu desktop -->
+    <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="cv.html" target="_blank">Il mio CV</a></li>
+        <li class="nav-item"><a class="nav-link" target="_blank">Contatti :</a></li>
+      </ul>
+      <div class="ms-3 d-flex align-items-center">
+        <a href="https://linkedin.com/tuo-profilo" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://facebook.com/tuo-profilo" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/FrancescoBianco90" class="text-white me-2"><i class="fab fa-github"></i></a>
+        <a href="mailto:tuamail@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<!-- Menu mobile nascosto inizialmente -->
+<div id="mobileMenu" class="mobile-menu-content hidden">
+  <ul>
+    <li><a href="cv.html">📄 Il mio CV</a></li>
+    <li><a href="https://linkedin.com/tuo-profilo" target="_blank">LinkedIn</a></li>
+    <li><a href="https://github.com/FrancescoBianco90" target="_blank">GitHub</a></li>
+    <li><a href="https://instagram.com/tuo-profilo" target="_blank">Instagram</a></li>
+  </ul>
+</div>
 
   <!-- Immagine personale -->
   <header class="hero text-center text-white">
@@ -98,19 +114,6 @@
       </form>
     </div>
   </section>
-
-  <!-- MENU STICKY SOLO MOBILE -->
-<nav class="menu-mobile">
-  <div class="hamburger" onclick="toggleMobileMenu()">☰ Menu</div>
-  <div id="mobileMenu" class="mobile-menu-content hidden">
-    <ul>
-      <li><a href="cv.html">📄 Il mio CV</a></li>
-      <li><a href="https://linkedin.com/tuo-profilo" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/FrancescoBianco90" target="_blank">GitHub</a></li>
-      <li><a href="https://instagram.com/tuo-profilo" target="_blank">Instagram</a></li>
-    </ul>
-  </div>
-</nav>
 
  <!-- JavaScript per aprire/chiudere il menu -->
   <script>
