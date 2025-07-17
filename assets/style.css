@@ -246,14 +246,17 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra gli articoli figli */
+    align-items: center; /* centra trasversalmente */
+    justify-content: center; /* centra lungo l'asse principale */
+    width: 100%; /* assicurati che occupi tutta la larghezza */
   }
   .blocchi-sezioni > * {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;  /* imposta larghezza meno di 100% per lasciare spazio */
+    max-width: 400px !important;
   }
   .blocchi-sezioni .custom-block-bg {
-    width: 90%;
-    max-width: 400px; 
+    width: 100% !important; /* figlio dentro il blocco */
   }
 }
