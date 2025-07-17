@@ -7,6 +7,8 @@ body {
     background-position: center;
     font-family: 'Press Start 2P', monospace;
     margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero {
@@ -29,7 +31,7 @@ section, .hero, footer {
 
 h1, h2, h4, p, a {
     color: rgb(229, 235, 236) !important;
-    text-shadow: #000000;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .navbar-nav .nav-link:hover {
@@ -50,6 +52,7 @@ h1, h2, h4, p, a {
   color: inherit;
   text-decoration: underline;
   transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .link-ciano:hover {
@@ -124,31 +127,6 @@ footer {
     color: #fff;
 }
 
-@media (max-width: 767px) {
-    .titolo-contattami,
-    .form-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.cv-section {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-}
-
-.cv-section h1, .cv-section h2, .cv-section p, .cv-section li {
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
-  margin-bottom: 10px;
-}
-
-.cv-section ul {
-  padding-left: 20px;
-}
-
 /* Nascondi il menu per desktop */
 .menu-mobile {
   display: none;
@@ -160,7 +138,7 @@ footer {
   color: white;
   cursor: pointer;
   user-select: none;
-  background: transparent; /* senza rosso */
+  background: transparent;
   padding: 0;
   margin: 0;
   border: none;
@@ -182,45 +160,28 @@ footer {
 
 /* Menu mobile (contenuto) */
 .mobile-menu-content {
-  display: none; /* di default nascosto */
+  display: none;
   position: absolute;
-  top: 56px; /* altezza navbar */
+  top: 56px;
   right: 0;
   background-color: #222;
   width: 200px;
   border-radius: 0 0 0 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   z-index: 1100;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.mobile-menu-content ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-}
-
-.mobile-menu-content ul li {
-  padding: 10px 20px;
-}
-
-.mobile-menu-content ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-}
-
-.mobile-menu-content ul li a:hover {
-  background-color: #444;
-}
-
-/* Mostra menu quando NON ha classe hidden */
 .mobile-menu-content:not(.hidden) {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Anti scroll */
-
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -228,7 +189,6 @@ html, body {
 
 * {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 img {
@@ -246,22 +206,20 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra trasversalmente */
-    justify-content: center; /* centra lungo l'asse principale */
-    width: 100%; /* assicurati che occupi tutta la larghezza */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   .blocchi-sezioni > * {
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 90% !important;  /* imposta larghezza meno di 100% per lasciare spazio */
+    width: 90% !important;
     max-width: 400px !important;
   }
   .blocchi-sezioni .custom-block-bg {
-    width: 100% !important; /* figlio dentro il blocco */
+    width: 100% !important;
   }
-}
 
-@media (max-width: 767px) {
   .row.justify-content-center.text-center {
     padding-left: 0;
     padding-right: 0;
