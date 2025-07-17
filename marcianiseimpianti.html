@@ -6,25 +6,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/cv-style.css" />
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
   <style>
-  @media (max-width: 768px) {
-    header.hero img {
-      display: none;
+    @media (max-width: 768px) {
+      header.hero img {
+        display: none;
+      }
     }
-  }
-</style>
+
+    /* MENU HAMBURGER STILE CV */
+    .navbar {
+      background-color: #000;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 999;
+    }
+
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #0ff;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0ff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
+      position: absolute;
+      right: 20px;
+      top: 55px;
+      min-width: 180px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.4);
+      z-index: 1000;
+    }
+
+    .menu-links a {
+      color: #0ff;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 10px;
+      text-decoration: none;
+    }
+
+    .menu-links a:hover {
+      color: #fff;
+      background: rgba(0,255,255,0.1);
+      border-radius: 4px;
+    }
+
+    .menu-links.show {
+      display: flex;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Menu Hamburger -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <h1 class="logo">Francesco Bianco</h1>
+      <button class="menu-toggle">&#9776;</button>
+      <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="cv.html">Torna al CV</a>
+        <a href="esselunga.html">Esselunga</a>
+        <a href="sielte.html">Sielte</a>
+        <a href="marcianise.html">Marcianise</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header con immagine -->
   <header class="hero text-white">
     <div class="header-content">
       <div style="position: absolute; top: 40px; right: 20px;">
-        <img src="assets/marcianise.jpeg" alt="Avatar Delivery"style="
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid cyan;
-      box-shadow: 0 0 0 8px black;">
+        <img src="assets/marcianise.jpeg" alt="Avatar Delivery" 
+        style="
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid cyan;
+          box-shadow: 0 0 0 8px black;">
       </div>
       <div class="intestazione">
         <h1><span>Esperienza in Marcianise Impianti</span></h1>
@@ -62,5 +143,15 @@
   <footer class="footer">
     <a href="cv.html" class="btn-download"><i class="fas fa-arrow-left"></i> Torna al CV</a>
   </footer>
+
+  <!-- Script Hamburger -->
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuLinks = document.querySelector(".menu-links");
+
+    menuToggle.addEventListener("click", () => {
+      menuLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

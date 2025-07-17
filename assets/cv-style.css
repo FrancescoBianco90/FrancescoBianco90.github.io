@@ -18,6 +18,8 @@
 .hero {
   padding: 40px;
   background: rgba(0,0,0,0.7);
+  padding-top: 70px;
+  position: relative;
 }
 
 .hero h1 span,

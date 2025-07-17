@@ -2,35 +2,106 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Esperienza - Sielte S.p.A.</title>
+  <title>Esperienza - Sielte</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/cv-style.css" />
   <style>
-  @media (max-width: 768px) {
-    header.hero img {
-      display: none;
+    /* MENU HAMBURGER STILE CV */
+    .navbar {
+      background-color: #000;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 999;
     }
-  }
-</style>
+
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #0ff;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0ff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
+      position: absolute;
+      right: 20px;
+      top: 55px;
+      min-width: 180px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.4);
+      z-index: 1000;
+    }
+
+    .menu-links a {
+      color: #0ff;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 10px;
+      text-decoration: none;
+    }
+
+    .menu-links a:hover {
+      color: #fff;
+      background: rgba(0,255,255,0.1);
+      border-radius: 4px;
+    }
+
+    .menu-links.show {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      header.hero img {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero text-white">
-    <div class="header-content">
-      <div style="position: absolute; top: 40px; right: 20px;">
-  <img src="assets/Sielte.png" alt="Avatar Tecnico"  
-    style="
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid cyan;
-      box-shadow: 0 0 0 8px black;">
-</div>
-      <div class="intestazione">
+
+  <!-- Menu Hamburger -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <h1 class="logo">Background</h1>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="cv.html">Torna al CV</a>
+        <a href="esselunga.html">Esselunga</a>
+        <a href="sielte.html">Sielte</a>
+        <a href="marcianise.html">Marcianise</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero text-white" style="padding: 40px; background: rgba(0,0,0,0.7);">
+    <div class="header-content" style="align-items: center; justify-content: flex-start;">
+      <div class="intestazione" style="flex: 1; display: flex; flex-direction: column;">
         <h1><span>Esperienza in Sielte S.p.A.</span></h1>
-        <p class="ruolo"><span>Giuntista Fibra Ottica FTTH</span></p>
-        <p><i class="fas fa-map-marker-alt"></i> Milano - Gennaio 2023 / Gennaio 2024</p>
+        <p class="ruolo"><span> Giuntista Fibra Ottica</span></p>
+        <p><i class="fas fa-map-marker-alt"></i> Milano - Maggio 2023 / Marzo 2024</p>
+      </div>
+      <div class="foto-header" style="margin-left: 30px;">
+        <img src="assets/Sielte.png" alt="Avatar Sielte" class="foto-cv" style="width: 200px; height: 200px; object-fit: contain; border: 4px solid #0ff; box-shadow: 0 0 0 6px #000; border-radius: 50%;" />
       </div>
     </div>
   </header>
@@ -38,23 +109,22 @@
   <main class="container my-5">
     <div class="cv-grid">
       <div class="cv-blocco">
-        <h2><i class="fa-solid fa-network-wired"></i><span>Attività principali</span></h2>
+        <h2><i class="fa-solid fa-tools"></i><span>Attività principali</span></h2>
         <ul>
-          <li>Giunzione e collaudo cavi in fibra ottica per reti FTTH</li>
-          <li>Lavoro su armadi e apparati di distribuzione interrati e aerei</li>
-          <li>Installazione e manutenzione di nodi ottici che collegano interi quartieri</li>
-          <li>Verifica segnali e performance tramite strumenti di misura OTDR</li>
-          <li>Rispettare standard di precisione su componenti delicati e critici</li>
+          <li>Installazione e manutenzione impianti tecnologici</li>
+          <li>Collaborazione con team di ingegneri per ottimizzazione sistemi</li>
+          <li>Verifiche di sicurezza e conformità normativa</li>
+          <li>Supporto tecnico per clienti e fornitori</li>
         </ul>
       </div>
 
       <div class="cv-blocco">
-        <h2><i class="fa-solid fa-microscope"></i><span>Soft skills sviluppate</span></h2>
+        <h2><i class="fa-solid fa-handshake-angle"></i><span>Soft skills sviluppate</span></h2>
         <ul>
-          <li><strong>Precisione tecnica</strong> nella gestione di apparati sensibili</li>
-          <li><strong>Problem solving</strong> rapido su guasti di rete complessi</li>
-          <li><strong>Affidabilità</strong> nelle operazioni su infrastrutture critiche per interi quartieri</li>
-          <li><strong>Gestione sicurezza</strong> in ambienti interrati e cantieri urbani</li>
+          <li><strong>Problem solving</strong> efficace sotto pressione</li>
+          <li><strong>Comunicazione</strong> chiara in contesti tecnici</li>
+          <li><strong>Organizzazione</strong> e pianificazione attività</li>
+          <li><strong>Teamwork</strong> in spazi confinati e in quota</li>
         </ul>
       </div>
     </div>
@@ -63,5 +133,14 @@
   <footer class="footer">
     <a href="cv.html" class="btn-download"><i class="fas fa-arrow-left"></i> Torna al CV</a>
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuLinks = document.querySelector(".menu-links");
+
+    menuToggle.addEventListener("click", () => {
+      menuLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
