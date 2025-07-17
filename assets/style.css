@@ -197,17 +197,27 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   overflow-wrap: break-word;
 }
 
-/* Responsive blocchi sezioni su mobile */
 @media (max-width: 768px) {
+  /* container che occupa tutta la larghezza */
+  .container, .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* blocchi sezioni */
   .blocchi-sezioni {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 
+  /* colonne che diventano larghe 100% */
   .blocchi-sezioni > .col-md-4 {
     width: 100% !important;
     max-width: 100% !important;
@@ -217,6 +227,7 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
     padding-right: 10px;
   }
 
+  /* blocchi interni */
   .custom-block-bg {
     width: 100% !important;
     max-width: 100% !important;
