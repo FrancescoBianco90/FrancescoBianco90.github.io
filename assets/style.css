@@ -197,17 +197,24 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   overflow-wrap: break-word;
 }
 
-/* Responsive blocchi sezioni su mobile */
+/* === MODIFICHE SOLO MOBILE === */
 @media (max-width: 768px) {
-  .container, .row {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    max-width: 100%;
+  /* Forza font Arial su mobile SOLO per index.html */
+  body {
+    font-family: Arial, sans-serif !important;
   }
 
+  /* Rimuovi padding e margini da container e row per piena larghezza */
+  .container, .row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Blocchi: col-md-4 diventi full width con padding interno */
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
