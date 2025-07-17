@@ -198,3 +198,13 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+/* Buttons impilati verticalmente */
+
+@media (max-width: 600px) {
+  .footer a.btn-download {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
