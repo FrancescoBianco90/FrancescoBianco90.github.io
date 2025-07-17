@@ -260,3 +260,17 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
     width: 100% !important; /* figlio dentro il blocco */
   }
 }
+
+@media (max-width: 767px) {
+  .row.justify-content-center.text-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row.justify-content-center.text-center > [class*="col-"] {
+    max-width: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
