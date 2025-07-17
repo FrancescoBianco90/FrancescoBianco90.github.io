@@ -212,3 +212,26 @@ footer {
 .mobile-menu-content:not(.hidden) {
   display: block;
 }
+
+/* Anti scroll */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, a, li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

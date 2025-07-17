@@ -168,9 +168,33 @@
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+   margin: 0 15px;
 }
 
 .btn-download:hover {
   background-color: #00FFFF;
   color: #111;
+}
+
+/* Anti scroll */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, a, li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
