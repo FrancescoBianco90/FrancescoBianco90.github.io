@@ -232,3 +232,24 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
     margin-right: auto;
   }
 }
+
+/* Rimuove padding e centra row */
+.row.justify-content-center.text-center {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 1200px; /* max larghezza, adattalo */
+}
+
+/* Centra i singoli blocchi */
+.blocchi-sezioni > .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Limita larghezza blocco interno */
+.custom-block-bg {
+  max-width: 350px;
+  width: 100%;
+}
