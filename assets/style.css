@@ -206,50 +206,26 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    align-items: center; /* centra trasversalmente */
+    width: 100%; /* prendi tutta la larghezza */
+    padding-left: 0;   /* rimuovi padding sinistro */
+    padding-right: 0;  /* rimuovi padding destro */
   }
-  .blocchi-sezioni > * {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 90% !important;
-    max-width: 400px !important;
+  
+  /* Ogni colonna diventa full width e centrata */
+  .blocchi-sezioni > .col-md-4 {
+    width: 100% !important;    /* 100% larghezza */
+    max-width: 100% !important; /* niente max-width ridotto */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 10px;  /* optional: un po' di padding per non attaccarsi ai bordi */
+    padding-right: 10px;
   }
-  .blocchi-sezioni .custom-block-bg {
+  
+  /* Blocco interno */
+  .custom-block-bg {
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
   }
-
-  .row.justify-content-center.text-center {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .row.justify-content-center.text-center > [class*="col-"] {
-    max-width: 400px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* Rimuove padding e centra row */
-.row.justify-content-center.text-center {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  max-width: 1200px; /* max larghezza, adattalo */
-}
-
-/* Centra i singoli blocchi */
-.blocchi-sezioni > .col-md-4 {
-  display: flex;
-  justify-content: center;
-}
-
-/* Limita larghezza blocco interno */
-.custom-block-bg {
-  max-width: 350px;
-  width: 100%;
 }
