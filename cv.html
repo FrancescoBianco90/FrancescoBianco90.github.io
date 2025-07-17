@@ -100,13 +100,15 @@
       <i class="fas fa-home"></i> Torna alla Home
     </a>
   </footer>
+    
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menuLinks = document.querySelector(".menu-links");
 
-  <!-- Script Hamburger -->
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('menu-links').classList.toggle('show');
-    });
-  </script>
+  menuToggle.addEventListener("click", () => {
+    menuLinks.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
