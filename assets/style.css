@@ -127,11 +127,6 @@ footer {
     color: #fff;
 }
 
-/* Nascondi il menu per desktop */
-.menu-mobile {
-  display: none;
-}
-
 /* Hamburger styling */
 .hamburger {
   font-size: 28px;
@@ -202,19 +197,15 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   overflow-wrap: break-word;
 }
 
+/* Responsive blocchi sezioni su mobile */
 @media (max-width: 768px) {
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  .blocchi-sezioni.row {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .blocchi-sezioni > .col-md-4 {
