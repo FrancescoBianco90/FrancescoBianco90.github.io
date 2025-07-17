@@ -11,6 +11,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Solo index.html usa Arial override */
+body.index-page {
+  font-family: Arial, sans-serif !important;
+}
+
 .hero {
     padding-top: 100px;
     padding-bottom: 50px;
