@@ -240,3 +240,15 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+@media (max-width: 768px) {
+  .blocchi-sezioni {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra gli articoli figli */
+  }
+  .blocchi-sezioni .custom-block-bg {
+    width: 90%;
+    max-width: 400px; 
+  }
+}
