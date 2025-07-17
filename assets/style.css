@@ -206,23 +206,26 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   .blocchi-sezioni {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra trasversalmente */
-    width: 100%; /* prendi tutta la larghezza */
-    padding-left: 0;   /* rimuovi padding sinistro */
-    padding-right: 0;  /* rimuovi padding destro */
+    align-items: center;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   
-  /* Ogni colonna diventa full width e centrata */
+  .blocchi-sezioni.row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .blocchi-sezioni > .col-md-4 {
-    width: 100% !important;    /* 100% larghezza */
-    max-width: 100% !important; /* niente max-width ridotto */
+    width: 100% !important;
+    max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 10px;  /* optional: un po' di padding per non attaccarsi ai bordi */
+    padding-left: 10px;
     padding-right: 10px;
   }
-  
-  /* Blocco interno */
+
   .custom-block-bg {
     width: 100% !important;
     max-width: 100% !important;
