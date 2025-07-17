@@ -168,7 +168,7 @@
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-   margin: 0 15px;
+  margin: 0 15px;
 }
 
 .btn-download:hover {
@@ -209,41 +209,87 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   }
 }
 
-/* === MENU MOBILE === */
-.mobile-nav {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
+/* === MENU MOBILE / DESKTOP === */
+
+.navbar {
+  background-color: #000;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 999;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #0ff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .menu-toggle {
   font-size: 28px;
   color: #0ff;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .menu-links {
   display: none;
+  flex-direction: column;
   background: #111;
   padding: 10px;
   border-radius: 8px;
   margin-top: 8px;
-  text-align: right;
-}
-
-.menu-links li {
-  list-style: none;
-  margin: 10px 0;
+  position: absolute;
+  right: 20px;
+  top: 55px;
+  min-width: 180px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.4);
+  z-index: 1000;
 }
 
 .menu-links a {
   color: #0ff;
-  text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+  padding: 8px 10px;
+  text-decoration: none;
 }
 
 .menu-links a:hover {
   color: #fff;
+  background: rgba(0,255,255,0.1);
+  border-radius: 4px;
+}
+
+.menu-links.show {
+  display: flex;
+}
+
+.hamburger {
+  font-size: 28px;
+  color: #0ff;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(0,255,255,0.3);
+}
+
+.mobile-menu-content {
+  background-color: rgba(0,0,0,0.85);
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
+  /* altre proprietà come sono */
 }
