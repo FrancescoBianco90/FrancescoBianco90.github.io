@@ -18,7 +18,6 @@ body {
     background: rgba(0, 0, 0, 0.7);
 }
 
-
 /* === SEZIONI CON SFONDO TRASLUCIDO === */
 section, .hero, footer {
     background-color: rgba(0, 0, 0, 0.6);
@@ -30,7 +29,7 @@ section, .hero, footer {
 /* === TESTO LEGGIBILE & COLORE === */
 h1, h2, h4, p, a {
     color: rgb(229, 235, 236) !important;
-    text-shadow: #000000;
+    text-shadow: 1px 1px 2px #000;
 }
 
 /* === NAVBAR === */
@@ -46,6 +45,23 @@ h1, h2, h4, p, a {
 
 .navbar a i:hover {
     color: #0ff;
+}
+
+/* Hover ciano per link offcanvas (testo + icone) */
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  color: #0ff !important;
+  text-decoration: underline;
+}
+.offcanvas .nav-link:hover i,
+.offcanvas .nav-link:focus i {
+  color: #0ff !important;
+}
+
+/* Hover ciano per icona hamburger */
+.navbar-toggler:hover .navbar-toggler-icon {
+  filter: invert(56%) sepia(93%) saturate(2983%) hue-rotate(149deg) brightness(108%) contrast(101%);
+  cursor: pointer;
 }
 
 /* === LINK PERSONALIZZATI === */
@@ -131,7 +147,6 @@ footer {
 }
 
 /* === RESPONSIVE ALIGNMENT === */
-
 @media (max-width: 767px) {
     .titolo-contattami,
     .form-container {
