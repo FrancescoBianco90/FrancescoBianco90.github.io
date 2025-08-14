@@ -1,4 +1,3 @@
-# portfolio
  Sito Personale di Francesco Bianco
 
 Benvenuto nel repository del mio sito web personale!  
