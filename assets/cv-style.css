@@ -214,6 +214,13 @@ body, p, h1, h2, h3, h4, h5, h6, a, li {
   }
 }
 
+@media (max-width: 576px) {
+  .ruolo {
+    line-height: 1.6;
+  }
+}
+
+
 /* === MENU MOBILE / DESKTOP === */
 
 .navbar {
